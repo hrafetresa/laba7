@@ -427,3 +427,23 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Игнорируем стандартный мусор компиляции
+[Bb]in/
+[Oo]bj/
+
+# ИСКЛЮЧЕНИЯ: Заставляем Git зайти внутрь папок bin и Debug
+!**/bin/
+!**/bin/Debug/
+!**/bin/Debug/**/
+
+# Разрешаем отслеживать только конкретную папку с темами и XML-базу
+!**/bin/Debug/**/Themes/
+!**/bin/Debug/**/history_data.xml
+
+# Дополнительно: разрешаем файлы КАРТИНКАМ внутри этих тем
+!**/Themes/**/*.jpg
+!**/Themes/**/*.jpeg
+!**/Themes/**/*.png
+!**/Themes/**/*.bmp
+!**/Themes/**/*.gif
