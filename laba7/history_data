@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HistoryData>
+	<Theme Name="Древняя Русь">
+		<Event ImageName="rurik.jpg">
+			<Description>Призвание варягов во главе с Рюриком на княжение в Новгород в 862 году. Начало династии Рюриковичей.</Description>
+			<Question Text="В каком году состоялось призвание варягов на Русь?">
+				<Answer IsCorrect="true">862</Answer>
+				<Answer IsCorrect="false">988</Answer>
+				<Answer IsCorrect="false">1147</Answer>
+			</Question>
+		</Event>
+	</Theme>
+</HistoryData>
