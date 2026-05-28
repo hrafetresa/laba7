@@ -11,6 +11,7 @@ namespace laba7
 
         public TestQuestionForm(HistoryEvent ev)
         {
+            MainForm.ApplyThemeToForm(this);
             InitializeComponent();
             _event = ev;
         }
@@ -20,20 +21,30 @@ namespace laba7
             lblQuestion.Text = _event.QuestionText;
             pnlAnswers.Controls.Clear();
 
-            int top = 10;
+            int topOffset = 10; 
+
             for (int i = 0; i < _event.Answers.Count; i++)
             {
                 RadioButton rb = new RadioButton
                 {
                     Text = _event.Answers[i].Text,
                     Tag = _event.Answers[i].IsCorrect,
-                    Top = top,
                     Left = 10,
-                    AutoSize = true
+                    Top = topOffset,
+                    Width = pnlAnswers.Width - 30, 
+                    AutoSize = true 
                 };
+
                 pnlAnswers.Controls.Add(rb);
-                top += 30;
+
+                topOffset += 32;
             }
+
+            pnlAnswers.Height = topOffset + 10;
+
+            btnSubmit.Top = pnlAnswers.Bottom + 15;
+
+            this.Height = btnSubmit.Bottom + 50;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

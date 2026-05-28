@@ -8,6 +8,7 @@ namespace laba7
 {
     public class HistoryEvent
     {
+        public string Title { get; set; }
         public string ImageName { get; set; }
         public string Description { get; set; }
         public string QuestionText { get; set; }
@@ -49,6 +50,7 @@ namespace laba7
                     {
                         var ev = new HistoryEvent
                         {
+                            Title = eventEl.Attribute("Title")?.Value ?? "",
                             ImageName = eventEl.Attribute("ImageName")?.Value,
                             Description = eventEl.Element("Description")?.Value,
                             QuestionText = eventEl.Element("Question")?.Attribute("Text")?.Value
@@ -86,6 +88,7 @@ namespace laba7
                     }
 
                     themeEl.Add(new XElement("Event",
+                        new XAttribute("Title", ev.Title ?? ""),
                         new XAttribute("ImageName", ev.ImageName ?? ""),
                         new XElement("Description", ev.Description ?? ""),
                         qEl
