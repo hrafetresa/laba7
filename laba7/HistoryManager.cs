@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml.Linq;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace laba7
 {
-    public class HistoryEvent
-    {
-        public string Title { get; set; }
-        public string ImageName { get; set; }
-        public string Description { get; set; }
-        public string QuestionText { get; set; }
-        public List<HistoryAnswer> Answers { get; set; } = new List<HistoryAnswer>();
-    }
-
     public class HistoryAnswer
     {
         public string Text { get; set; }
         public bool IsCorrect { get; set; }
+    }
+
+    public class HistoryEvent
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ImageName { get; set; }
+        public List<HistoryAnswer> Answers { get; set; } = new List<HistoryAnswer>();
+        public string QuestionText { get; set; } 
     }
 
     public class HistoryTheme
@@ -29,7 +29,21 @@ namespace laba7
 
     public static class HistoryManager
     {
-        private static readonly string XmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "history_data.xml");
+        private static string _defaultXmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "history_data.xml");
+
+        public static string CustomFilePath { get; set; }
+
+        private static string XmlPath => CustomFilePath ?? _defaultXmlPath;
+
+        private static void CreateEmptyXml()
+        {
+            try
+            {
+                XDocument doc = new XDocument(new XElement("Themes"));
+                doc.Save(XmlPath);
+            }
+            catch { }
+        }
 
         public static List<HistoryTheme> LoadData()
         {
@@ -43,6 +57,8 @@ namespace laba7
             try
             {
                 XDocument doc = XDocument.Load(XmlPath);
+                if (doc.Root == null) return themes;
+
                 foreach (var themeEl in doc.Root.Elements("Theme"))
                 {
                     var theme = new HistoryTheme { Name = themeEl.Attribute("Name")?.Value };
@@ -75,33 +91,51 @@ namespace laba7
 
         public static void SaveData(List<HistoryTheme> themes)
         {
-            XElement root = new XElement("HistoryData");
-            foreach (var theme in themes)
+            try
             {
-                XElement themeEl = new XElement("Theme", new XAttribute("Name", theme.Name));
-                foreach (var ev in theme.Events)
+                XElement root = new XElement("Themes");
+
+                foreach (var theme in themes)
                 {
-                    XElement qEl = new XElement("Question", new XAttribute("Text", ev.QuestionText ?? ""));
-                    foreach (var ans in ev.Answers)
+                    XElement themeEl = new XElement("Theme", new XAttribute("Name", theme.Name ?? ""));
+
+                    foreach (var ev in theme.Events)
                     {
-                        qEl.Add(new XElement("Answer", new XAttribute("IsCorrect", ans.IsCorrect), ans.Text));
+                        XElement eventEl = new XElement("Event",
+                            new XAttribute("Title", ev.Title ?? ""),
+                            ev.ImageName != null ? new XAttribute("ImageName", ev.ImageName) : null,
+                            new XElement("Description", ev.Description ?? "")
+                        );
+
+                        if (!string.IsNullOrEmpty(ev.QuestionText))
+                        {
+                            XElement questionEl = new XElement("Question", new XAttribute("Text", ev.QuestionText));
+
+                            foreach (var ans in ev.Answers)
+                            {
+                                XElement ansEl = new XElement("Answer",
+                                    new XAttribute("IsCorrect", ans.IsCorrect ? "True" : "False"),
+                                    ans.Text ?? ""
+                                );
+                                questionEl.Add(ansEl);
+                            }
+
+                            eventEl.Add(questionEl);
+                        }
+
+                        themeEl.Add(eventEl);
                     }
 
-                    themeEl.Add(new XElement("Event",
-                        new XAttribute("Title", ev.Title ?? ""),
-                        new XAttribute("ImageName", ev.ImageName ?? ""),
-                        new XElement("Description", ev.Description ?? ""),
-                        qEl
-                    ));
+                    root.Add(themeEl);
                 }
-                root.Add(themeEl);
-            }
-            root.Save(XmlPath);
-        }
 
-        private static void CreateEmptyXml()
-        {
-            new XDocument(new XElement("HistoryData")).Save(XmlPath);
+                XDocument doc = new XDocument(root);
+                doc.Save(XmlPath);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Ошибка при сохранении XML: {ex.Message}");
+            }
         }
     }
 }

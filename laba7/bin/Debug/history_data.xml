@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HistoryData>
+  <Theme Name="Древняя Русь">
+    <Event Title="Призвание варягов" ImageName="Варяги.jpg">
+      <Description>В 862 году, согласно летописи, славянские и финно-угорские племена, устав от междоусобиц, призвали на княжение варягов во главе с Рюриком. Рюрик сел княжить в Новгороде. Это событие считается традиционной датой зарождения древнерусской государственности и началом династии Рюриковичей.</Description>
+      <Question Text="В каком году, согласно летописям, состоялось призвание варягов на Русь?">
+        <Answer IsCorrect="true">862</Answer>
+        <Answer IsCorrect="false">988</Answer>
+        <Answer IsCorrect="false">1147</Answer>
+        <Answer IsCorrect="false">1242</Answer>
+      </Question>
+    </Event>
+    <Event Title="Крещение Руси" ImageName="Vasnetsov_Bapt_Vladimir.jpg">
+      <Description>В 988 году киевский князь Владимир Святославович принял христианство из Византии и провозгласил его государственной религией. Крещение началось с жителей Киева, которых массово крестили в водах Днепра. Это событие укрепило государство, подняло авторитет Руси в Европе и дало мощный толчок развитию культуры, письменности и архитектуры.</Description>
+      <Question Text="Какой киевский князь крестил Русь в 988 году?">
+        <Answer IsCorrect="false">Олег Вещий</Answer>
+        <Answer IsCorrect="true">Владимир Святославович</Answer>
+        <Answer IsCorrect="false">Ярослав Мудрый</Answer>
+        <Answer IsCorrect="false">Святослав Игоревич</Answer>
+      </Question>
+    </Event>
+    <Event Title="Расцвет Руси при Ярославе Мудром" ImageName="i.jpg">
+      <Description>Время правления Ярослава Мудрого (1019–1054) стало эпохой наивысшего расцвета Киевской Руси. Был издан первый письменный свод законов — «Русская Правда», строились величественные храмы (Софийские соборы в Киеве и Новгороде), открывались первые школы и библиотеки, а династические браки связали Русь со всей Европой.</Description>
+      <Question Text="Как назывался первый письменный свод законов Древней Руси, созданный при Ярославе?">
+        <Answer IsCorrect="true">Русская Правда</Answer>
+        <Answer IsCorrect="false">Судебник</Answer>
+        <Answer IsCorrect="false">Соборное уложение</Answer>
+        <Answer IsCorrect="false">Конституция</Answer>
+      </Question>
+    </Event>
+    <Event Title="Ледовое побоище" ImageName="i (1).jpg">
+      <Description>5 апреля 1242 года на льду Чудского озера произошло решающее сражение между новгородским войском князя Александра Невского и рыцарями Ливонского ордена. Благодаря блестящей тактике Александра, тяжелые немецкие рыцари были окружены и разбиты, а часть из них провалилась под тонкий лед. Наступление крестоносцев на северо-западные русские земли было остановлено.</Description>
+      <Question Text="На каком озере произошло Ледовое побоище в 1242 году?">
+        <Answer IsCorrect="false">Ладожское</Answer>
+        <Answer IsCorrect="false">Онежское</Answer>
+        <Answer IsCorrect="true">Чудское</Answer>
+        <Answer IsCorrect="false">Ильмень</Answer>
+      </Question>
+    </Event>
+    <Event Title="Куликовская битва" ImageName="i (2).jpg">
+      <Description>8 сентября 1380 года на Куликовом поле (у впадения реки Непрядва в Дон) объединенное русское войско под руководством московского князя Дмитрия Ивановича разгромило ордынское войско темника Мамая. Сражение началось с легендарного поединка богатырей Пересвета и Челубея. Эта победа показала, что Русь способна побеждать Орду, а князь Дмитрий получил прозвище «Донской».</Description>
+      <Question Text="Какое прозвище получил князь Дмитрий Иванович после победы на Куликовом поле?">
+        <Answer IsCorrect="false">Мудрый</Answer>
+        <Answer IsCorrect="false">Невский</Answer>
+        <Answer IsCorrect="false">Калита</Answer>
+        <Answer IsCorrect="true">Донской</Answer>
+      </Question>
+    </Event>
+  </Theme>
+  <Theme Name="Эпоха Петра I">
+    <Event Title="Великое посольство" ImageName="x1-p7_.jpg">
+      <Description>В 1697–1698 годах была организована дипломатическая миссия России в Западную Европу. Уникальность её была в том, что молодой царь Пётр I поехал туда инкогнито под именем урядника Петра Михайлова. В Европе Пётр изучал кораблестроение (лично работая плотником на верфях в Голландии и Англии), военное дело и европейский образ жизни, что легло в основу его будущих реформ.</Description>
+      <Question Text="Под каким вымышленным именем Пётр I путешествовал в составе Великого посольства?">
+        <Answer IsCorrect="false">Князь Романов</Answer>
+        <Answer IsCorrect="true">Урядник Пётр Михайлов</Answer>
+        <Answer IsCorrect="false">Мастер Алексеев</Answer>
+        <Answer IsCorrect="false">Капитан Петров</Answer>
+      </Question>
+    </Event>
+    <Event Title="Основание Санкт-Петербурга" ImageName="i (3).jpg">
+      <Description>16 (27) мая 1703 года на отвоеванных у шведов землях в устье реки Невы на Заячьем острове Пётр I заложил Петропавловскую крепость. Этот день считается датой основания Санкт-Петербурга, который строился как европейский город с четкой планировкой улиц. В 1712 году город официально стал новой столицей Российского государства, «окном в Европу».</Description>
+      <Question Text="В каком году Пётр I основал Санкт-Петербург?">
+        <Answer IsCorrect="false">1699</Answer>
+        <Answer IsCorrect="true">1703</Answer>
+        <Answer IsCorrect="false">1712</Answer>
+        <Answer IsCorrect="false">1721</Answer>
+      </Question>
+    </Event>
+    <Event Title="Полтавская битва" ImageName="maxresdefault.jpg">
+      <Description>27 июня 1709 года под Полтавой состоялась генеральная битва Северной войны. Русская армия под личным командованием Петра I наголову разгромила непобедимую до этого шведскую армию короля Карла XII. Победа в Полтавском сражении привела к перелому в войне в пользу России и закрепила за ней статус мощной военной силы.</Description>
+      <Question Text="Против армии какого короля сражался Пётр I в Полтавской битве?">
+        <Answer IsCorrect="true">Карл XII</Answer>
+        <Answer IsCorrect="false">Людовик XIV</Answer>
+        <Answer IsCorrect="false">Фридрих II</Answer>
+        <Answer IsCorrect="false">Август II</Answer>
+      </Question>
+    </Event>
+    <Event Title="Гангутское сражение" ImageName="Battle_of_Gangut-Bakua.jpg">
+      <Description>27 июля 1714 года у мыса Гангут в Балтийском море русский гребной флот (галеры) одержал первую в истории крупную морскую победу над линейным парусным флотом Швеции. Используя штиль, лишивший шведские парусники маневренности, русские пошли на абордаж. Пётр I приравнивал Гангут по значению к Полтавской битве.</Description>
+      <Question Text="Какую особенность русского флота успешно использовал Пётр I в Гангутском сражении?">
+        <Answer IsCorrect="false">Огромные трехпалубные пушечные корабли</Answer>
+        <Answer IsCorrect="false">Подводные мины</Answer>
+        <Answer IsCorrect="true">Маневренный гребной флот (галеры) в условиях штиля</Answer>
+        <Answer IsCorrect="false">Помощь союзного английского флота</Answer>
+      </Question>
+    </Event>
+    <Event Title="Провозглашение России империей" ImageName="i (4).jpg">
+      <Description>В 1721 году после победоносного завершения 21-летней Северной войны и заключения Ништадтского мира Сенат и Синод преподнесли Петру I титул «Императора Всероссийского», «Великого» и «Отца Отечества». Русское царство официально трансформировалось в Российскую империю, став признанной мировым сообществом великой державой.</Description>
+      <Question Text="Какой официальный статус (титул государства) обрела Россия в 1721 году после окончания Северной войны?">
+        <Answer IsCorrect="false">Московское царство</Answer>
+        <Answer IsCorrect="false">Киевская Русь</Answer>
+        <Answer IsCorrect="true">Российская империя</Answer>
+        <Answer IsCorrect="false">Российская Федерация</Answer>
+      </Question>
+    </Event>
+  </Theme>
+  <Theme Name="Новая папка">
+    <Event Title="i (1)" ImageName="i (1).jpg">
+      <Description></Description>
+      <Question Text="">
+        <Answer IsCorrect="true"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+      </Question>
+    </Event>
+    <Event Title="i (2)" ImageName="i (2).jpg">
+      <Description></Description>
+      <Question Text="">
+        <Answer IsCorrect="true"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+      </Question>
+    </Event>
+    <Event Title="i" ImageName="i.jpg">
+      <Description></Description>
+      <Question Text="">
+        <Answer IsCorrect="true"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+      </Question>
+    </Event>
+    <Event Title="maxresdefault" ImageName="maxresdefault.jpg">
+      <Description></Description>
+      <Question Text="">
+        <Answer IsCorrect="true"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+      </Question>
+    </Event>
+    <Event Title="x1-p7_" ImageName="x1-p7_.jpg">
+      <Description></Description>
+      <Question Text="">
+        <Answer IsCorrect="true"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+        <Answer IsCorrect="false"></Answer>
+      </Question>
+    </Event>
+  </Theme>
+</HistoryData>
